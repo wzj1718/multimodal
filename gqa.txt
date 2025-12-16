@@ -1,0 +1,366 @@
+================ Running drop=1 ================
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+-----------------args.drop 1
+[32m2025-12-16 00:42:48[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m523[0m - [1mVerbosity set to INFO[0m
+[32m2025-12-16 00:42:49[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m612[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-12-16 00:42:49[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m692[0m - [1mSelected Tasks: ['gqa'][0m
+[32m2025-12-16 00:42:49[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.08it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.19it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.17it/s]
+Generating testdev split:   0%|          | 0/398 [00:00<?, ? examples/s]Generating testdev split:  25%|██▌       | 100/398 [00:00<00:00, 839.44 examples/s]Generating testdev split: 100%|██████████| 398/398 [00:00<00:00, 1931.33 examples/s]Generating testdev split: 100%|██████████| 398/398 [00:00<00:00, 1755.85 examples/s]
+Loading GQA images:   0%|          | 0/398 [00:00<?, ?it/s]Loading GQA images:   6%|▋         | 25/398 [00:00<00:01, 247.67it/s]Loading GQA images:  14%|█▍        | 57/398 [00:00<00:01, 289.21it/s]Loading GQA images:  23%|██▎       | 92/398 [00:00<00:00, 313.42it/s]Loading GQA images:  32%|███▏      | 129/398 [00:00<00:00, 333.53it/s]Loading GQA images:  41%|████      | 164/398 [00:00<00:00, 335.08it/s]Loading GQA images:  50%|████▉     | 198/398 [00:00<00:00, 332.70it/s]Loading GQA images:  58%|█████▊    | 232/398 [00:00<00:00, 323.86it/s]Loading GQA images:  67%|██████▋   | 265/398 [00:00<00:00, 315.30it/s]Loading GQA images:  75%|███████▍  | 297/398 [00:00<00:00, 308.44it/s]Loading GQA images:  83%|████████▎ | 329/398 [00:01<00:00, 308.79it/s]Loading GQA images:  91%|█████████ | 362/398 [00:01<00:00, 312.35it/s]Loading GQA images:  99%|█████████▉| 394/398 [00:01<00:00, 313.47it/s]Loading GQA images: 100%|██████████| 398/398 [00:01<00:00, 315.28it/s]
+Map (num_proc=8):   0%|          | 0/12578 [00:00<?, ? examples/s]Map (num_proc=8):   7%|▋         | 934/12578 [00:01<00:21, 547.30 examples/s]Map (num_proc=8):  15%|█▍        | 1834/12578 [00:02<00:14, 741.44 examples/s]Map (num_proc=8):  19%|█▉        | 2431/12578 [00:03<00:14, 707.34 examples/s]Map (num_proc=8):  26%|██▋       | 3307/12578 [00:04<00:12, 758.29 examples/s]Map (num_proc=8):  33%|███▎      | 4135/12578 [00:05<00:10, 788.44 examples/s]Map (num_proc=8):  40%|███▉      | 4995/12578 [00:06<00:09, 821.92 examples/s]Map (num_proc=8):  47%|████▋     | 5893/12578 [00:07<00:07, 869.42 examples/s]Map (num_proc=8):  54%|█████▍    | 6789/12578 [00:08<00:06, 898.44 examples/s]Map (num_proc=8):  54%|█████▍    | 6789/12578 [00:25<00:06, 898.44 examples/s]Map (num_proc=8):  55%|█████▍    | 6889/12578 [01:14<03:13, 29.34 examples/s] Map (num_proc=8):  55%|█████▌    | 6955/12578 [01:14<03:04, 30.50 examples/s]Map (num_proc=8):  58%|█████▊    | 7358/12578 [01:18<02:15, 38.63 examples/s]Map (num_proc=8):  59%|█████▉    | 7482/12578 [01:18<01:58, 42.87 examples/s]Map (num_proc=8):  60%|██████    | 7584/12578 [01:21<01:57, 42.67 examples/s]Map (num_proc=8):  62%|██████▏   | 7756/12578 [01:21<01:30, 53.34 examples/s]Map (num_proc=8):  64%|██████▎   | 8000/12578 [01:21<01:02, 72.95 examples/s]Map (num_proc=8):  64%|██████▎   | 8000/12578 [01:35<01:02, 72.95 examples/s]Map (num_proc=8):  68%|██████▊   | 8573/12578 [02:40<05:05, 13.12 examples/s]Map (num_proc=8):  73%|███████▎  | 9146/12578 [02:42<02:36, 21.99 examples/s]Map (num_proc=8):  77%|███████▋  | 9718/12578 [02:42<01:22, 34.77 examples/s]Map (num_proc=8):  82%|████████▏ | 10290/12578 [02:43<00:43, 52.88 examples/s]Map (num_proc=8):  86%|████████▋ | 10862/12578 [02:44<00:22, 75.78 examples/s]Map (num_proc=8):  91%|█████████ | 11434/12578 [02:46<00:11, 98.11 examples/s]Map (num_proc=8): 100%|██████████| 12578/12578 [02:46<00:00, 180.34 examples/s]Map (num_proc=8): 100%|██████████| 12578/12578 [02:58<00:00, 180.34 examples/s]Traceback (most recent call last):
+  File "/root/miniconda3/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/root/miniconda3/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1281, in launch_command
+    simple_launcher(args)
+  File "/root/miniconda3/lib/python3.12/site-packages/accelerate/commands/launch.py", line 869, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/root/miniconda3/bin/python', '-m', 'lmms_eval', '--model', 'qwen3_vl', '--model_args', 'pretrained=/root/autodl-tmp/models/Qwen3-VL-4B-Instruct,attn_implementation=sdpa,interleave_visuals=False', '--tasks', 'gqa', '--batch_size', '1', '--drop', '1']' died with <Signals.SIGKILL: 9>.
+================ Finished drop=1 ================
+================ Running drop=2 ================
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+-----------------args.drop 2
+[32m2025-12-16 00:46:34[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m523[0m - [1mVerbosity set to INFO[0m
+[32m2025-12-16 00:46:36[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m612[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-12-16 00:46:36[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m692[0m - [1mSelected Tasks: ['gqa'][0m
+[32m2025-12-16 00:46:36[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.07it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.19it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.17it/s]
+Loading GQA images:   0%|          | 0/398 [00:00<?, ?it/s]Loading GQA images:   9%|▉         | 35/398 [00:00<00:01, 343.70it/s]Loading GQA images:  18%|█▊        | 70/398 [00:00<00:00, 338.62it/s]Loading GQA images:  26%|██▋       | 105/398 [00:00<00:00, 342.34it/s]Loading GQA images:  35%|███▌      | 140/398 [00:00<00:00, 338.33it/s]Loading GQA images:  44%|████▎     | 174/398 [00:00<00:00, 337.42it/s]Loading GQA images:  52%|█████▏    | 208/398 [00:00<00:00, 330.13it/s]Loading GQA images:  61%|██████    | 242/398 [00:00<00:00, 321.00it/s]Loading GQA images:  69%|██████▉   | 275/398 [00:00<00:00, 318.02it/s]Loading GQA images:  77%|███████▋  | 307/398 [00:00<00:00, 313.41it/s]Loading GQA images:  85%|████████▌ | 339/398 [00:01<00:00, 313.85it/s]Loading GQA images:  93%|█████████▎| 371/398 [00:01<00:00, 315.41it/s]Loading GQA images: 100%|██████████| 398/398 [00:01<00:00, 324.24it/s]
+Map (num_proc=8):  12%|█▏        | 1572/12578 [00:00<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:01<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:02<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:03<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:03<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:04<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:05<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:06<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:06<?, ? examples/s]
+Loading GQA images:   0%|          | 0/398 [00:00<?, ?it/s]Loading GQA images:   8%|▊         | 31/398 [00:00<00:01, 307.46it/s]Loading GQA images:  16%|█▌        | 62/398 [00:00<00:01, 298.45it/s]Loading GQA images:  24%|██▍       | 95/398 [00:00<00:00, 312.25it/s]Loading GQA images:  33%|███▎      | 130/398 [00:00<00:00, 323.77it/s]Loading GQA images:  41%|████      | 163/398 [00:00<00:00, 325.01it/s]Loading GQA images:  49%|████▉     | 196/398 [00:00<00:00, 326.36it/s]Loading GQA images:  58%|█████▊    | 229/398 [00:00<00:00, 321.20it/s]Loading GQA images:  66%|██████▌   | 262/398 [00:00<00:00, 314.20it/s]Loading GQA images:  74%|███████▍  | 294/398 [00:00<00:00, 304.67it/s]Loading GQA images:  82%|████████▏ | 326/398 [00:01<00:00, 308.89it/s]Loading GQA images:  90%|████████▉ | 357/398 [00:01<00:00, 308.39it/s]Loading GQA images:  98%|█████████▊| 389/398 [00:01<00:00, 310.51it/s]Loading GQA images: 100%|██████████| 398/398 [00:01<00:00, 313.79it/s]
+Map (num_proc=8):  12%|█▏        | 1572/12578 [00:00<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:01<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:02<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:03<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:03<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:04<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:05<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:06<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:06<?, ? examples/s]
+Loading GQA images:   0%|          | 0/398 [00:00<?, ?it/s]Loading GQA images:   8%|▊         | 30/398 [00:00<00:01, 295.83it/s]Loading GQA images:  15%|█▌        | 60/398 [00:00<00:01, 289.59it/s]Loading GQA images:  23%|██▎       | 92/398 [00:00<00:01, 301.85it/s]Loading GQA images:  32%|███▏      | 126/398 [00:00<00:00, 315.84it/s]Loading GQA images:  40%|████      | 160/398 [00:00<00:00, 319.84it/s]Loading GQA images:  49%|████▉     | 195/398 [00:00<00:00, 328.60it/s]Loading GQA images:  57%|█████▋    | 228/398 [00:00<00:00, 327.53it/s]Loading GQA images:  66%|██████▌   | 261/398 [00:00<00:00, 320.63it/s]Loading GQA images:  74%|███████▍  | 294/398 [00:00<00:00, 315.31it/s]Loading GQA images:  82%|████████▏ | 327/398 [00:01<00:00, 317.36it/s]Loading GQA images:  90%|█████████ | 360/398 [00:01<00:00, 319.13it/s]Loading GQA images:  99%|█████████▊| 393/398 [00:01<00:00, 321.12it/s]Loading GQA images: 100%|██████████| 398/398 [00:01<00:00, 318.20it/s]
+Map (num_proc=8):  12%|█▏        | 1572/12578 [00:00<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:01<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:02<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:03<?, ? examples/s]Map (num_proc=8):  12%|█▏        | 1572/12578 [00:04<?, ? examples/s]Traceback (most recent call last):
+  File "/root/miniconda3/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/root/miniconda3/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1281, in launch_command
+    simple_launcher(args)
+  File "/root/miniconda3/lib/python3.12/site-packages/accelerate/commands/launch.py", line 869, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/root/miniconda3/bin/python', '-m', 'lmms_eval', '--model', 'qwen3_vl', '--model_args', 'pretrained=/root/autodl-tmp/models/Qwen3-VL-4B-Instruct,attn_implementation=sdpa,interleave_visuals=False', '--tasks', 'gqa', '--batch_size', '1', '--drop', '2']' died with <Signals.SIGKILL: 9>.
+================ Finished drop=2 ================
+================ Running drop=3 ================
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+-----------------args.drop 3
+[32m2025-12-16 00:47:16[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m523[0m - [1mVerbosity set to INFO[0m
+[32m2025-12-16 00:47:18[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m612[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-12-16 00:47:18[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m692[0m - [1mSelected Tasks: ['gqa'][0m
+[32m2025-12-16 00:47:18[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.94it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.04it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.81it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 1063, in download
+    self.dataset[split] = self.config.process_docs(self.dataset[split])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/gqa/utils.py", line 7, in gqa_process_docs
+    gqa_raw_image_dataset = load_dataset("/root/autodl-tmp/data/gqa2111111111111", "testdev_balanced_images", split="testdev", token=True)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1038, in dataset_module_factory
+    raise FileNotFoundError(f"Couldn't find any data file at {relative_to_absolute_path(path)}.")
+FileNotFoundError: Couldn't find any data file at /root/autodl-tmp/data/gqa2111111111111.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/__main__.py", line 561, in cli_evaluate
+    results, samples = cli_evaluate_single(args)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/__main__.py", line 696, in cli_evaluate_single
+    results = evaluator.simple_evaluate(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/utils.py", line 590, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/evaluator.py", line 200, in simple_evaluate
+    task_dict = get_task_dict(tasks, task_manager, task_type)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 565, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 378, in load_task_or_group
+    all_loaded_tasks = dict(collections.ChainMap(*map(load_fn, task_list)))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 297, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 267, in _load_task
+    task_object = TaskObj(config=config, model_name=self.model_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 1646, in __init__
+    super().__init__(data_dir, cache_dir, download_mode, config, model_name)
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 722, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 330, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 467, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 368, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 411, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x7fd242f99e80 state=finished raised FileNotFoundError>]
+[32m2025-12-16 00:47:28[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m583[0m - [31m[1mError during evaluation: RetryError[<Future at 0x7fd242f99e80 state=finished raised FileNotFoundError>]. Please set `--verbosity=DEBUG` to get more information.[0m
+================ Finished drop=3 ================
+================ Running drop=4 ================
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+-----------------args.drop 4
+[32m2025-12-16 00:47:39[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m523[0m - [1mVerbosity set to INFO[0m
+[32m2025-12-16 00:47:41[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m612[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-12-16 00:47:41[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m692[0m - [1mSelected Tasks: ['gqa'][0m
+[32m2025-12-16 00:47:41[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.88it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.96it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.72it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 1063, in download
+    self.dataset[split] = self.config.process_docs(self.dataset[split])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/gqa/utils.py", line 7, in gqa_process_docs
+    gqa_raw_image_dataset = load_dataset("/root/autodl-tmp/data/gqa2111111111111", "testdev_balanced_images", split="testdev", token=True)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1038, in dataset_module_factory
+    raise FileNotFoundError(f"Couldn't find any data file at {relative_to_absolute_path(path)}.")
+FileNotFoundError: Couldn't find any data file at /root/autodl-tmp/data/gqa2111111111111.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/__main__.py", line 561, in cli_evaluate
+    results, samples = cli_evaluate_single(args)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/__main__.py", line 696, in cli_evaluate_single
+    results = evaluator.simple_evaluate(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/utils.py", line 590, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/evaluator.py", line 200, in simple_evaluate
+    task_dict = get_task_dict(tasks, task_manager, task_type)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 565, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 378, in load_task_or_group
+    all_loaded_tasks = dict(collections.ChainMap(*map(load_fn, task_list)))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 297, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 267, in _load_task
+    task_object = TaskObj(config=config, model_name=self.model_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 1646, in __init__
+    super().__init__(data_dir, cache_dir, download_mode, config, model_name)
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 722, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 330, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 467, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 368, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 411, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x7fd836052810 state=finished raised FileNotFoundError>]
+[32m2025-12-16 00:47:51[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m583[0m - [31m[1mError during evaluation: RetryError[<Future at 0x7fd836052810 state=finished raised FileNotFoundError>]. Please set `--verbosity=DEBUG` to get more information.[0m
+================ Finished drop=4 ================
+================ Running drop=5 ================
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+-----------------args.drop 5
+[32m2025-12-16 00:48:02[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m523[0m - [1mVerbosity set to INFO[0m
+[32m2025-12-16 00:48:04[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m612[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-12-16 00:48:04[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m692[0m - [1mSelected Tasks: ['gqa'][0m
+[32m2025-12-16 00:48:04[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.89it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.87it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.66it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 1063, in download
+    self.dataset[split] = self.config.process_docs(self.dataset[split])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/gqa/utils.py", line 7, in gqa_process_docs
+    gqa_raw_image_dataset = load_dataset("/root/autodl-tmp/data/gqa2111111111111", "testdev_balanced_images", split="testdev", token=True)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1038, in dataset_module_factory
+    raise FileNotFoundError(f"Couldn't find any data file at {relative_to_absolute_path(path)}.")
+FileNotFoundError: Couldn't find any data file at /root/autodl-tmp/data/gqa2111111111111.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/__main__.py", line 561, in cli_evaluate
+    results, samples = cli_evaluate_single(args)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/__main__.py", line 696, in cli_evaluate_single
+    results = evaluator.simple_evaluate(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/utils.py", line 590, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/evaluator.py", line 200, in simple_evaluate
+    task_dict = get_task_dict(tasks, task_manager, task_type)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 565, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 378, in load_task_or_group
+    all_loaded_tasks = dict(collections.ChainMap(*map(load_fn, task_list)))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 297, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 267, in _load_task
+    task_object = TaskObj(config=config, model_name=self.model_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 1646, in __init__
+    super().__init__(data_dir, cache_dir, download_mode, config, model_name)
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 722, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 330, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 467, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 368, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 411, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x7f9a5f0471a0 state=finished raised FileNotFoundError>]
+[32m2025-12-16 00:48:14[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m583[0m - [31m[1mError during evaluation: RetryError[<Future at 0x7f9a5f0471a0 state=finished raised FileNotFoundError>]. Please set `--verbosity=DEBUG` to get more information.[0m
+================ Finished drop=5 ================
+================ Running drop=6 ================
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+-----------------args.drop 6
+[32m2025-12-16 00:48:25[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m523[0m - [1mVerbosity set to INFO[0m
+[32m2025-12-16 00:48:27[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m612[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-12-16 00:48:27[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m692[0m - [1mSelected Tasks: ['gqa'][0m
+[32m2025-12-16 00:48:27[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.88it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.95it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.71it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 1063, in download
+    self.dataset[split] = self.config.process_docs(self.dataset[split])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/gqa/utils.py", line 7, in gqa_process_docs
+    gqa_raw_image_dataset = load_dataset("/root/autodl-tmp/data/gqa2111111111111", "testdev_balanced_images", split="testdev", token=True)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/datasets/load.py", line 1038, in dataset_module_factory
+    raise FileNotFoundError(f"Couldn't find any data file at {relative_to_absolute_path(path)}.")
+FileNotFoundError: Couldn't find any data file at /root/autodl-tmp/data/gqa2111111111111.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/__main__.py", line 561, in cli_evaluate
+    results, samples = cli_evaluate_single(args)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/__main__.py", line 696, in cli_evaluate_single
+    results = evaluator.simple_evaluate(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/utils.py", line 590, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/evaluator.py", line 200, in simple_evaluate
+    task_dict = get_task_dict(tasks, task_manager, task_type)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 565, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 378, in load_task_or_group
+    all_loaded_tasks = dict(collections.ChainMap(*map(load_fn, task_list)))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 297, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/tasks/__init__.py", line 267, in _load_task
+    task_object = TaskObj(config=config, model_name=self.model_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 1646, in __init__
+    super().__init__(data_dir, cache_dir, download_mode, config, model_name)
+  File "/root/autodl-tmp/lmms-eval-main/lmms_eval/api/task.py", line 722, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 330, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 467, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 368, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/tenacity/__init__.py", line 411, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x7f24a8317440 state=finished raised FileNotFoundError>]
+[32m2025-12-16 00:48:37[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m583[0m - [31m[1mError during evaluation: RetryError[<Future at 0x7f24a8317440 state=finished raised FileNotFoundError>]. Please set `--verbosity=DEBUG` to get more information.[0m

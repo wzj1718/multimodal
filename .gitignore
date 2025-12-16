@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+*.pyo
+
+.env
+.venv
+.venv*/
+*.log
+
+# 大文件和数据
+data/
+datasets/
+checkpoint*/
+checkpoints/
+outputs/
+runs/
+wandb/
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+
+# Jupyter
+.ipynb_checkpoints/
+
+# HF / cache
+.cache/
+.huggingface/
+transformers_cache/
