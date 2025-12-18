@@ -6,12 +6,14 @@ export CUDA_LAUNCH_BLOCKING=1
 
 # ===== 手动指定要跑的模型路径（重点在这里） =====
 MODELS=(
-  "/dss/dssfs04/lwp-dss-0002/pn25ho/pn25ho-dss-0001/di93pux/multimodal/merged_models/merge_8B_only_qkvo/19/merge_22--35+0.1base+0.9vl"
+  "/dss/dssfs04/lwp-dss-0002/pn25ho/pn25ho-dss-0001/di93pux/multimodal/merged_models/merge_8B_only_qkvo/19/merge_25--35+0.1base+0.9vl"
+  "/dss/dssfs04/lwp-dss-0002/pn25ho/pn25ho-dss-0001/di93pux/multimodal/merged_models/merge_8B_only_qkvo/19/merge_25--35+0.1base+0.9vl"
   "/dss/dssfs04/lwp-dss-0002/pn25ho/pn25ho-dss-0001/di93pux/multimodal/merged_models/merge_8B_only_qkvo/19/merge_27--35+0.1base+0.9vl"
+  "/dss/dssfs04/lwp-dss-0002/pn25ho/pn25ho-dss-0001/di93pux/multimodal/merged_models/merge_8B_only_qkvo/19/merge_28--35+0.1base+0.9vl"
   "/dss/dssfs04/lwp-dss-0002/pn25ho/pn25ho-dss-0001/di93pux/multimodal/merged_models/merge_8B_only_qkvo/19/merge_29--35+0.1base+0.9vl"
 )
 
-TASKS=(mme)
+TASKS=(mmbench_en_dev mmstar  )
 DROPS=(0)
 
 PORT=12988
